@@ -7,6 +7,12 @@
 	text-decoration: none;
 }
 
+a{
+	color: black;
+	padding: 0px;
+	margin: 0px;
+}
+
 html{
 	display: flex;
 	align-items: center;
@@ -140,4 +146,119 @@ footer{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+h2{
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+	color: rgb(0, 110, 255);
+	margin: 0px;
+}
+
+.tile {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	margin: 50px;
+
+}
+
+.description {
+	display: flex;
+	flex-direction: column;
+	background-color: #f8f8f8;
+	border-radius: 16px;
+}
+
+h5 {
+	display: flex;
+	justify-content: center;
+	font-size: 25px;
+	margin: 75px 0px 0px 0px;
+	padding: 0px;
+}
+
+.year {
+	color: rgb(0, 110, 255);
+}
+
+.place{
+	color: #b5b5b5;
+}
+
+.skills_title{
+	font-size: 25px;
+	display: flex;
+	font-weight: bold;
+	color: rgb(0, 110, 255);
+}
+
+.icon{
+	height: 50px;
+	width: 50px;
+}
+
+.skills_img{
+	display: flex;
+	align-items: center;
+}
+
+.skill{
+	display: flex;
+	background-color: #f8f8f8;
+	padding: 10px;
+	border-radius: 16px;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+}
+
+.name {
+	font-weight: bold;
+
+}
+
+.project{
+	display: flex;
+	flex-direction: column;
+	height: 400px;
+	background-color: white;
+	justify-content: center;
+	align-items: center;
+	width: 600px;
+	border-radius: 16px 0px 0px 16px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+.pro {
+	background-color: #f8f8f8;
+	border-radius: 16px;
+}
+
+.lorem{
+	width: 300px;
+}
+
+.pproject {
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 15px;
+}
+
+img{
+	margin: 0px;
+	padding: 0px;
+}
+
+.site{
+	width: 400px;
+	height: 400px;
+	border-radius: 0px 16px 16px 0px;
+}
+
+.a{
+	color: white;
 }
