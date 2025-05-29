@@ -1,61 +1,127 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="stylesheet.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CssNavigator</title>
+	<link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <header>
-        <a href="index.html"><div class="button" id="base">Yaroslav Velker</div></a>
-        <div class="menu">
-            <a href="index.html"><p>Главная</p></a>
-            <a href="resume.html"><p>Резюме</p></a>
-            <a href="projects.html"><p>Проекты</p></a>
-        </div>
-    </header>
-    <main>
-        <section class="main">
-            <div class="home">
-                <div class="line">
-                    <p class="linetext">Ученик ⋅ Разработчик ⋅ Дизайнер</p>
-                </div>
-                <p class="hi">
-                    Здравствуйте!
-                </p>        
-                <p class="hi2">
-                    Давайте делать сайт вместе!
-                </p>
-                <div class="choice">
-                    <a href="resume.html">
-                        <p class="r">
-                            Резюме
-                        </p>        
-                    </a>
-                    <a href="projects.html">
-                    <p class="p">
-                        Проекты
-                    </p>
-                    </a>
-                </div>
-            </div>
-            <div class="photo">
-                <img src="I.png" alt="I">
-            </div>                         
-        </section>
-        <section class="about">
-            <h3>About</h3>
-            <h4>
-                Привет! Я Yaroslav Velker и я могу помочь сделать сайт!
-            </h4>
-            <p class="text">
-                Я учусь в 6 классе, но я уже довольно хорошо знаю html & css. Если нужна помощь в разработке сайта - я могу помочь! Я умею как делать сайты по шаблону, так и создавать полностью собственные сайты. Помогу с сайтом любого обьема, от простый одностраничников, до больших сайтов, с множеством страниц. Напишите мне, я помогу!
-            </p>
-        </section>
-    </main>
-    <footer>
-        Copyright© Yaroslav Velker 2025
+	<header>
+		<div class="logo">
+			<a href="index.html"><h1>CssNavigator</h1></a>
+		</div>
+		<div class="menu">
+			<a href="index.html" class="menu_tile index">Навигатор</a>
+			<a href="info.html" class="menu_tile nav">О сайте</a>
+			<a href="form.html" class="menu_tile info">Добавить сайт</a>
+		</div>		
+	</header>
+	<hr>
+	<main>
+
+		<div class="six">
+
+			<div class="tiles">
+				<h3>Генераторы</h3>
+				<div class="category">					
+					<div class="tile">
+						<a class="link" href="https://doodad.dev/pattern-generator/" target="_blank"><p class="cente">Генератор паттернов</p></a>
+					</div>
+					<div class="tile">
+				
+						<a class="link" href="https://haikei.app/" target="_blank">Генератор форм</a>
+					</div>
+					<div class="tile">
+						<a class="link" href="https://logomaster.ai/ru/" target="_blank">Генератор логотипов</a>
+					</div>
+				</div>
+			</div>
+			<div class="tiles">
+				<h3>Иконки</h3>
+				<div class="category">
+					<div class="tile">
+						<a class="link" href="https://fontawesome.com/icons" target="_blank">Лучшая коллекция иконок</a>
+					</div>
+					<div class="tile">
+						<a class="link" href="https://www.svgrepo.com/" target="_blank">Набор SVG-иконок</a>
+					</div>
+					<div class="tile">
+						<a class="link" href="https://undraw.co/illustrations" target="_blank">Картинки SVG</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="six">
+			<div class="tiles">
+				<h3>Инструменты</h3>				
+				<div class="category">
+					<div class="tile">
+						<a class="link" href="https://carbon.now.sh/" target="_blank">Если нужно добавить код на сайт</a>
+					</div>
+					<div class="tile">
+						<a class="link" href="https://stylifyme.com" target="_blank">Информация о сайте</a>
+					</div>
+					<div class="tile">
+						<a class="link" href="https://tinywow.com/" target="_blank">Огромный набор инструментов</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="tiles">
+				<h3>Картинки</h3>
+				<div class="category">
+					<div class="tile">
+						<a class="link" href="https://designstripe.com/" target="_blank">Набор изображений</a>
+					</div>
+					<div class="tile">
+						<a class="link" href="https://lorem.space" target="_blank">Картинки-заглушки</a>
+					</div>
+					<div class="tile">
+						<a class="link" href="https://bgjar.com/" target="_blank">Классные паттерны</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="six">
+			<div class="tiles">
+				<h3 class="first">Палитры</h3>
+				<div class="category">
+					<div class="tile">
+						<a class="link" href="https://coolors.co/" target="_blank">Набор цветовых палитр</a>
+					</div>
+					<div class="tile">
+						<a class="link" href="https://colorhunt.co/" target="_blank">Еще одна палитра</a>
+					</div>					
+				</div>
+			</div>
+			<div class="tiles">
+				<h3>Персонажи</h3>
+				<div class="category">
+					<div class="tile">
+						<a class="link" href="https://8biticon.com/" target="_blank">Создание 8bit персонажей</a>
+					</div>
+					<div class="tile">
+						<a class="link" href="https://getavataaars.com/" target="_blank">Создание персонажей</a>
+					</div>
+				</div>					
+			</div>
+			<div class="tiles">
+				<h3>Фильтры</h3>
+				<div class="category">
+					<div class="tile">
+						<a class="link" href="https://www.cssfilters.co/" target="_blank">Классные фильтры</a>
+					</div>
+					<div class="tile">
+						<a class="link" href="https://colorkit.co/change-svg-color/" target="_blank">Смена SVG цветов</a>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</main>
+	<hr class="hr">
+    <footer class="footer">
+		<p><br>© CssNavigator 2025</p>
     </footer>
 </body>
 </html>
