@@ -61,6 +61,7 @@ span{
 footer{
 	display: flex;
 	justify-content: center;
+	margin: 0px 0px 20px 0px;
 }
 
 .tile {
@@ -127,9 +128,6 @@ form{
 	.six{
 		flex-direction: column;
 	}
-	.footer{
-		margin: 0px 0px 20px 0px;
-	}
 }
 
 @media (max-width: 525px){
@@ -153,4 +151,59 @@ form{
 	.category{
 		flex-direction: column;
 	}
+}
+
+@media (max-width: 350px){
+	header{
+		flex-direction: column ;
+		justify-content: center;
+		align-items: center;
+	}
+	.index {
+		padding: 0px 0px 0px 0px;
+	}
+	.info{
+		padding: 0px 0px 0px 0px;
+	}
+
+	.nav{
+		padding: 0px 0px 0px 0px;
+	}
+	.logo {
+		font-size: 70%;
+	}
+}
+
+@media (max-width: 150px){
+	.tile{
+		height: 80px;
+		width: 80px;
+	}
+	.link{
+		font-size: 12px;
+	}
+	.footer{
+		text-align: center;
+		font-size: 70%;
+	}
+	.logo{
+		font-size: 50%;
+	}
+	.menu_tile{
+		font-size: 70%;
+	}
+	h3{
+		font-size: 70%;
+		
+	}
+	.category{
+		margin: 25px 0px;
+	}
+	.tiles{
+		margin: 17px 7px;
+	}
+	header{
+		padding: 0px;
+	}
+
 }
