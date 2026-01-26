@@ -7,6 +7,11 @@
 body{
     background-color: #001836;
     position: relative;
+    height: 100%;
+}
+
+html{
+    height: 1700px;
 }
 
 .menu {
@@ -19,7 +24,7 @@ body{
 
 .menu_btn {
     margin: 10px 20px;
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
     
 }
@@ -36,10 +41,10 @@ a{
 form {
     background-color: #2e2e2e;
     padding: 15px;
-    width: 250px;
-    height: 300px;
-    margin: auto;
+    width: 20%;
+    height: 60%;
     display: flex;
+    margin: auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -70,15 +75,16 @@ input {
 
 }
 
-.section {
+.section_head {
     background-color: #2e2e2e;
     color: white;
     width: 80%;
     display: flex;
-    margin: 20px auto;
+    margin: 35px auto 0px auto;
     align-items: center;
     padding: 0px 15px;
-    border-radius: 15px;
+    border-radius: 15px 15px 0px 0px;
+    font-size: 30px;
 
 }
 
@@ -94,4 +100,53 @@ input {
     position: absolute;
     bottom: 10px;
     display: none;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    background-color: #005c99;
+    width: 80%;
+    padding: 0px 15px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.tile{
+    height: 300px;
+    width: 225px;
+    background-color: #2e2e2e;
+    color: white;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tile_image{
+    height: 150px;
+    margin: 5px;
+}
+
+.tile_text{
+    padding: 0px;
+    margin: 5px;
+    font-size: 21px;
+}
+
+.none {
+    display: none;
+}
+
+.border_rad_full{
+    border-radius: 15px;
+}
+
+.border_rad{
+    border-radius: 15px 15px 0px 0px;
 }
