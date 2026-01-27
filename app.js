@@ -10,3 +10,9 @@ for (let i = 0; i < openBtns.length; i++){
         sectionHeads[i].classList.toggle("border_rad_full")
     }) 
 }
+
+const form = document.querySelector("#login")
+const signinBtn = document.querySelector("#signinBtn")
+signinBtn.addEventListener("click", ()=>{
+    form.classList.toggle("none")
+})

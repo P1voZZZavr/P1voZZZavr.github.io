@@ -41,8 +41,8 @@ a{
 form {
     background-color: #2e2e2e;
     padding: 15px;
-    width: 20%;
-    height: 60%;
+    width: 200px;
+    height: 300px;
     display: flex;
     margin: auto;
     flex-direction: column;
@@ -50,7 +50,10 @@ form {
     justify-content: center;
     color: white;
     border-radius: 16px;
-    position: relative;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    border: 2px solid #228FD9;
 }
 
 .input, .submit {
@@ -60,10 +63,13 @@ form {
     justify-content: center;
     width: 100%;
     margin: 5px;
+    font-size: 25px;
 }
 
+
 input {
-    width: 70%;
+    width: 80%;
+    height: 30px;
     border-radius: 5px;
     border: 1px solid white;
 }
@@ -71,8 +77,8 @@ input {
 #signin, #signup {
     margin: 5px;
     background-color: #228FD9;
-    
-
+    width: 80%;
+    height: 30px;
 }
 
 .section_head {
@@ -98,8 +104,9 @@ input {
     text-align: center;
     color: red;
     position: absolute;
-    bottom: 10px;
+    bottom: -5px;
     display: none;
+    font-size: 15px;
 }
 
 section {

@@ -16,8 +16,28 @@
             <div class="menu_btn">
                 <p></p><a href="">Корзина</a>
             </div>
-            <div class="menu_btn" id="menuBtn">
-                <p></p><a href="reg.html">Войти</a>
+            <div class="menu_btn">
+                <div>
+                    <p></p><a href="#" id="signinBtn">Войти</a>  
+                    <form id="login" class="none">
+                        <div class="input">
+                            <label for="name">Логин</label>
+                            <input type="text" name="name"><br>            
+                        </div>
+                        <div class="input">
+                            <label for="pass">Пароль</label>
+                            <input type="pass" name="pass"><br>            
+                        </div>
+                        <div class="submit input">
+                            <input type="submit" id="signup" value="Зарегистрироваться">
+                        </div>
+                        <div class="submit input">
+                            <input type="submit" id="signin" value="Войти">
+                        </div>
+                        <div class="login_error"><p>Такой пользователь уже зарегестрирован</p></div>
+                    </form>                                      
+                </div>
+            </div>
             </div>
         </div>
     </header>
@@ -65,6 +85,7 @@
             </div>      
         </section>
     </main>
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
+    <script src="reg.js" defer></script>
 </body>
 </html>

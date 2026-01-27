@@ -3,7 +3,7 @@ const login = document.querySelector("#login")
 const signin = document.querySelector("#signin")
 const signup = document.querySelector("#signup")
 const loginError = document.querySelector(".login_error")
-const loginForm = new FormData(login)
+
 
 function menuBtn() {
     let menuBtn = document.querySelector("#menuBtn")
@@ -13,9 +13,9 @@ function menuBtn() {
     }
 }
 
-function fetchServerPost(data,name){
+async function fetchServerPost(data,name){
     let dataJSON = JSON.stringify(data)
-    fetch(`http://web4.informatics.ru:82/api/a3c284b621490ba9630746b38a4f89de/${name}`,{
+    const response = await fetch(`http://web4.informatics.ru:82/api/a3c284b621490ba9630746b38a4f89de/${name}`,{
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: dataJSON
@@ -29,12 +29,13 @@ function fetchServerPost(data,name){
         }
     })
     .then((data)=>{
-        console.log(data)
-    })    
+        return data
+    })
+    return response
 }
 
 async function fetchServerGet(name){
-    fetch(`http://web4.informatics.ru:82/api/a3c284b621490ba9630746b38a4f89de/${name}`)
+    const response = await fetch(`http://web4.informatics.ru:82/api/a3c284b621490ba9630746b38a4f89de/${name}`)
     .then((response)=>{
         if (response.ok){
             return response.json()
@@ -43,12 +44,17 @@ async function fetchServerGet(name){
             console.log("Ошибка ", response.status)
         }
     })
+    .then((data)=>{
+        return data
+    })
+    return response
 }
 
 
 signup.addEventListener("click", (event)=>{
     event.preventDefault()
     let data = {}
+    let loginForm = new FormData(login)
     let name = loginForm.get("name")
     data.pass = loginForm.get("pass")
     let get = fetchServerGet(name)
@@ -60,12 +66,12 @@ signup.addEventListener("click", (event)=>{
     }
 })
 
-signin.addEventListener("click", (event)=>{
+signin.addEventListener("click", async (event)=>{
     event.preventDefault()
+    let loginForm = new FormData(login)
     let name = loginForm.get("name")
     let pass = loginForm.get("pass")
-    let get = fetchServerGet(name)
-    
+    let get = await fetchServerGet(name)
     if (get.pass == pass){
         localStorage.setItem("name",name)
     }
