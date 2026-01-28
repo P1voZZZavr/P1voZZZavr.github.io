@@ -258,3 +258,9 @@ h1 {
         transform: rotate(0deg);
     }
 }
+
+footer {
+    width: 100%;
+    text-align: center;
+    color: #228FD9;
+}
