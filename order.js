@@ -1,3 +1,5 @@
+"use strict"
+
 const buyBtns = document.querySelectorAll(".buy_btn")
 const tileTexts = document.querySelectorAll(".CName")
 const consoleName = document.querySelector("span")

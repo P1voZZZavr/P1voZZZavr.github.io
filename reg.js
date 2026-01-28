@@ -1,4 +1,5 @@
-"use strict";
+"use strict"
+
 const login = document.querySelector("#login")
 const signin = document.querySelector("#signin")
 const signup = document.querySelector("#signup")

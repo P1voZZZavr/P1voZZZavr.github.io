@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 const openBtns = document.querySelectorAll(".open")
 const sections = document.querySelectorAll(".section")
