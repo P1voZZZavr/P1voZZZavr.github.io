@@ -62,6 +62,14 @@ signup.addEventListener("click", async (event)=>{
     let name = loginForm.get("name").toLowerCase()
     data.pass = loginForm.get("pass")
     let get = await fetchServerGet(name)
+    if (data.pass == ""){
+        loginErrorText.innerText = "Поле пароля не может быть пустым"
+        loginError.style.display = "block";
+        setTimeout(()=>{
+            location.reload()
+        },1000)
+        return false
+    }
     if (get.pass == null){
         await fetchServerPost(data, name)
         loginSuccessful.style.display = "block"
