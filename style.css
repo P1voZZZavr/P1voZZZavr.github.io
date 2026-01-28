@@ -100,14 +100,16 @@ input {
     margin: 0px 10px 0px 5px ;
 }
 
-.login_error {
+.login_error, .login_successful {
     text-align: center;
-    color: red;
     position: absolute;
     bottom: -5px;
     display: none;
     font-size: 15px;
 }
+
+.login_error{color: red;}
+.login_successful{color: green;}
 
 section {
     display: flex;
