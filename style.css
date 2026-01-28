@@ -160,3 +160,10 @@ section {
 .border_rad{
     border-radius: 15px 15px 0px 0px;
 }
+
+.buy_btn{
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #005c99;
+}
