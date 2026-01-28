@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <img style="width: 12%;" src="logo.png" alt="">
+        <a href="#"><img class="logo anim" style="width: 12%;" src="logo.png" alt=""></a>
         <div class="menu">
             <div class="menu_btn">
                 <div>
@@ -36,6 +36,7 @@
         </div>
     </header>
     <main>
+        <h1 class="none"></h1>
         <section>
             <div class="section_head border_rad_full">
                 <a href="#"><img class="open" src="open.png" alt=""></a>
@@ -75,27 +76,27 @@
             </div>                
             <div class="section none">
                 <div class="tile">
+                     <p class="tile_text CName">PlayStation 5 Pro</p>
+                     <img class="tile_image" src="images/playstation/ps5pro.png" alt="">
+                     <p class="tile_text">699$</p>
+                     <a href="#"><p class="buy_btn tile_text">Купить</p></a>
+                </div>                
+                <div class="tile">
                      <p class="tile_text CName">PlayStation 5</p>
                      <img class="tile_image" src="images/playstation/ps5.png" alt="">
                      <p class="tile_text">549$</p>
                      <a href="#"><p class="buy_btn tile_text">Купить</p></a>
                 </div>
                 <div class="tile">
-                     <p class="tile_text CName">PlayStation 5 Pro</p>
-                     <img class="tile_image" src="images/playstation/ps5pro.png" alt="">
-                     <p class="tile_text">699$</p>
+                     <p class="tile_text CName">PlayStation 4 Pro</p>
+                     <img class="tile_image" src="images/playstation/ps4pro.png" alt="">
+                     <p class="tile_text">179$</p>
                      <a href="#"><p class="buy_btn tile_text">Купить</p></a>
-                </div>
+                </div>                
                 <div class="tile">
                      <p class="tile_text CName">PlayStation 4</p>
                      <img class="tile_image" src="images/playstation/ps4.png" alt="">
                      <p class="tile_text">149$</p>
-                     <a href="#"><p class="buy_btn tile_text">Купить</p></a>
-                </div>
-                <div class="tile">
-                     <p class="tile_text CName">PlayStation 4 Pro</p>
-                     <img class="tile_image" src="images/playstation/ps4pro.png" alt="">
-                     <p class="tile_text">179$</p>
                      <a href="#"><p class="buy_btn tile_text">Купить</p></a>
                 </div>
             </div>           
@@ -146,13 +147,17 @@
                 </div>
                 <div class="form_elem">
                     <label class="form_text" for="mail">Email дял связи</label>
-                    <input class="form_input" type="text" name="mail" required>                    
+                    <input class="form_input" type="email" name="mail" required>                    
                 </div>
                 <div class="form_elem">
                     <p class="form_text">Название консоли</p>
                     <p class="form_input"><span></span></p>
                 </div>
-                <input class="form_submit" type="submit" value="Создать заказ">
+                <div class="form_elem">
+                    <p class="form_text">Оплата при получении</p>
+                    <p class="form_input"></p>    
+                </div>
+                <input class="form_submit" type="submit" value="Создать заказ (отменяет предыдущие заказы)">
             </form>
         </div>
     </main>

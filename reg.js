@@ -67,10 +67,18 @@ signup.addEventListener("click", async (event)=>{
         loginError.style.display = "block";
         setTimeout(()=>{
             location.reload()
-        },1000)
+        },2000)
         return false
     }
-    if (get.pass == null){
+    else if (name.includes("order")){
+        loginErrorText.innerText = "Имя не может содержать слово order"
+        loginError.style.display = "block";
+        setTimeout(()=>{
+            location.reload()
+        },2000)
+        return false        
+    }
+    else if (get.pass == null){
         await fetchServerPost(data, name)
         loginSuccessful.style.display = "block"
         loginSuccessfulText.innerText = "Успешная регистрация"
@@ -81,7 +89,7 @@ signup.addEventListener("click", async (event)=>{
         loginError.style.display = "block";
         setTimeout(()=>{
             location.reload()
-        },1000)
+        },2000)
     }
 })
 
@@ -103,7 +111,7 @@ signin.addEventListener("click", async (event)=>{
         loginError.style.display = "block";
         setTimeout(()=>{
             location.reload()
-        },1000)
+        },2000)
     }
     else {
         loginSuccessful.style.display = "none"
@@ -111,6 +119,6 @@ signin.addEventListener("click", async (event)=>{
         loginError.style.display = "block";
         setTimeout(()=>{
             location.reload()
-        },1000)
+        },2000)
     }
 })

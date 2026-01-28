@@ -16,3 +16,8 @@ const signinBtn = document.querySelector("#signinBtn")
 signinBtn.addEventListener("click", ()=>{
     form.classList.toggle("none")
 })
+
+const logo = document.querySelector(".logo")
+logo.addEventListener("click", ()=>{
+    logo.classList.toggle("anim")
+})

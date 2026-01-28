@@ -14,10 +14,6 @@ main{
     position: relative;
 }
 
-html{
-    height: 1700px;
-}
-
 .menu {
     position: absolute;
     right: 30px;
@@ -33,9 +29,14 @@ html{
     
 }
 
-header, main{
+header{
     margin: 0px 0px 10px 0px;
 }
+
+main {
+    margin: 0px 0px 50px 0px;
+}
+
 
 a{
     color: inherit;
@@ -226,4 +227,34 @@ h2{
     position: absolute;
     right: 10px;
     top: 10px;
+}
+
+.red {color: red;}
+.green {color: green;}
+
+h1 {
+    position: relative;
+    top: -100px;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+}
+
+.anim {
+    animation: sway 3s linear infinite;
+}
+
+@keyframes sway {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
