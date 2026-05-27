@@ -6,22 +6,39 @@
             required: true,
         }
     });
+    const emit = defineEmits(['delete-message', 'add-message'])
+    const del = (i) => {
+        emit('delete-message', i)
+    }
+    const elem = ref("");
+    const add_elem = () => {
+        if(!elem.value.trim()) return
+        emit('add-message', elem.value)
+        elem.value = ""
+    }
 </script>
 
 <template>
     <div class="chat">
-        <div v-for="mess in props.user.messages" :class="{my: mess.my}" class="mess" style="width: 100%;">
-            <div class="message"><p>{{ mess.message }}</p><img :class="{myimg: mess.my}" src="../assets/trash.png" alt=""></div>
+        <div class="messages">
+            <div v-for="(mess,i) in props.user.messages" :class="{my: mess.my}" class="mess">
+                <div class="message"><p>{{ mess.message }}</p><img @click="del(i)" :class="{myimg: mess.my}" src="../assets/trash.png" alt=""></div>
+            </div>            
         </div>
-        <input id="search" type="text">
+        <input @keydown.enter="add_elem" v-model="elem" id="search" type="text">
     </div>
 </template>
 
 <style scoped>
+    .messages{
+        height: 90%;
+        width: 100%;
+        overflow-y: auto;
+    }
     img{
         height: 25px;
         position: absolute;
-        top: 2px;
+        top: 5px;
         right: 10px;
         display: none;
     }
@@ -30,17 +47,23 @@
     }
     .message{
         color: white;
-        background-color: #303030;
         width: 30%;
-        height: 30px;
-        text-align: center;
-        margin: 10px 15px 0px 15px;
-        border-radius: 5px;
+        text-align: left;
+        margin: 10px 15px 5px 15px;
         position: relative;
+    }
+    p{
+        margin: 1px 0px 0px 5px;
+        background-color: #303030;
+        border-radius: 5px;
+        padding: 5px;
+        overflow-wrap: anywhere; 
     }
     .mess{
         display: flex;
         justify-content: left;
+        width: 100%;
+        
     }
     .my{
         justify-content: right;
@@ -53,16 +76,15 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
     #search{
-        position: absolute;
-        bottom: 15px;
-        left: 12px;
         width: 97%;
         background-color: #303030;
         border: 2px solid #454545;
         border-radius: 10px;
         color: white;
-        
+        margin: 0px 0px 10px 0px;
     }
 </style>
